@@ -1,0 +1,67 @@
+.home{
+    #image-text{
+        .row{
+            margin-bottom: $grid-gutter;
+            align-items: center;
+
+            &:nth-child(2n){
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    #banner{
+        background-color: theme-color(grey);
+        padding: $grid-gutter 0;
+
+        .row{
+            align-items: center;
+        }
+        
+        .images{
+            padding-bottom: 20px;
+            position: relative;
+
+            img{
+                width: 70%;
+
+                &:last-child{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    #services{
+        text-align: center;
+
+        h2{
+            margin-bottom: $grid-gutter;
+        }
+
+        .service{
+            margin-bottom: $grid-gutter;
+
+            .icon{
+                max-width: 150px;
+            }
+        }
+    }
+
+    #blue-banner{
+        background-color: theme-color(primary);
+        padding: $grid-gutter * 2 0;
+        color: theme-color(white);
+        text-align: center;
+
+        h2{
+            color: theme-color(white);
+        }
+    }
+
+    #clients{
+        text-align: center;
+    }
+}

@@ -1,7 +1,38 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: theme-color(white);
+  box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
+
+  .nav {
+    li {
+      @extend .nav-item;
+
+      &:last-child{
+        a{
+          padding-right: 0;
+        }
+      }
+    }
+    
+    a {
+      @extend .nav-link;
+      color: theme-color(black);
+      font-weight: 700;
+
+      &:hover{
+        color: theme-color(primary);
+      }
+    }
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.banner{
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
 }

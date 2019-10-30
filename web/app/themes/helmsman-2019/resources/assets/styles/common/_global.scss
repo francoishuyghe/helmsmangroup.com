@@ -1,0 +1,51 @@
+body{
+    font-family: 'Montserrat', san-serif;
+
+    & > .wrap{
+        min-height: 100vh;
+    }
+}
+
+h2{
+    color: theme-color(primary);
+    font-weight: 700;
+}
+
+h3{
+    color: theme-color(primary);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+a.btn{
+    display: inline-block;
+    background-color: theme-color(primary);
+    padding: .5em 1.5em;
+    border-radius: 2em;
+    text-transform: uppercase;
+    color: theme-color(white);
+    letter-spacing: .05em;
+    transition: background-color .3s;
+
+    &.light{
+        background-color: theme-color(blue);
+
+        &:hover{
+            background-color: theme-color(primary);
+        }
+    }
+
+    &:hover {
+        color: theme-color(white);
+        background-color: theme-color(blue);
+    }
+}
+
+section {
+    margin: 100px 0;
+}
+
+img {
+    max-width: 100%;
+}
+

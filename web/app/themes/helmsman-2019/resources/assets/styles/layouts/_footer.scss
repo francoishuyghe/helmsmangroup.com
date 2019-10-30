@@ -1,0 +1,14 @@
+footer.content-info{
+    background-color: theme-color(darkgrey);
+    color: theme-color(grey);
+    padding: $grid-gutter / 2 0;
+    text-align: center;
+
+    section{
+        margin: 0;
+    }
+
+    p{
+        margin-bottom: 0;
+    }
+}
