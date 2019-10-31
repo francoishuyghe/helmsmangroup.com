@@ -6,7 +6,7 @@
         <div class="container">
           <h2>{{ $data['intro_title'] }}</h2>
           <p>{{ $data['intro_paragraph'] }}</p>
-          <img src="{{ $data['intro_image']['url'] }}" />
+          <img data-aos="fade-up" src="{{ $data['intro_image']['url'] }}" />
         </div>
     </section>
 
@@ -28,7 +28,7 @@
       @foreach ($data['image_text'] as $row)
           <div class="row">
             <div class="col-md-6">
-              <img src="{{ $row['image']['url'] }}" />
+              <img data-aos="fade-up" src="{{ $row['image']['url'] }}" />
             </div>
             <div class="col-md-6">
               {!! $row['text'] !!}
