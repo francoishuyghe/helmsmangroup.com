@@ -34,7 +34,7 @@
     @include('partials/home-banner')
     @include('partials/home-services')
     @include('partials/home-bluebanner')
-    @include('partials/home-clients')
+    @include('partials/clients')
 
   @endwhile
 @endsection

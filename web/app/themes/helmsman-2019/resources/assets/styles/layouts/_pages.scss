@@ -63,5 +63,28 @@
 
     #clients{
         text-align: center;
+
+        .row{
+            justify-content: center;
+        }
+    }
+}
+
+.page.contact{
+    background-color: theme-color(grey);
+
+    & > .wrap{
+        display: flex;
+        align-items: center;
+
+        .content{
+            flex: 1;
+        }
+    }
+}
+
+.page.services{
+    .page-content{
+        text-align: center;
     }
 }

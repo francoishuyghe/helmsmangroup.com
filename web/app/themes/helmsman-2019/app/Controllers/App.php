@@ -11,6 +11,13 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function header()
+    {
+        $data['logo'] = get_field('logo', 'option');
+
+        return $data;
+    }
+
     public static function title()
     {
         if (is_home()) {
