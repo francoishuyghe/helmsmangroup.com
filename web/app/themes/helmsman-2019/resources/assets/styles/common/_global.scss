@@ -1,5 +1,6 @@
 body{
     font-family: 'Montserrat', san-serif;
+    color: theme-color(darkgrey);
 
     & > .wrap{
         min-height: 100vh;
@@ -9,12 +10,20 @@ body{
 h2{
     color: theme-color(primary);
     font-weight: 700;
+    margin-bottom: $grid-gutter;
 }
 
 h3{
     color: theme-color(primary);
     font-weight: 700;
     font-size: 1.5em;
+}
+
+h4{
+    font-weight: 700;
+    color: theme-color(darkgrey);
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 a.btn{
@@ -47,5 +56,22 @@ section {
 
 img {
     max-width: 100%;
+}
+
+
+input,
+textarea{
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+    max-width: 500px;
+
+    &[type=submit]{
+        background-color: theme-color(primary);
+        color: theme-color(white);
+        width: auto;
+    }
 }
 

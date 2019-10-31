@@ -10,9 +10,16 @@
         </div>
     </section>
 
-    <section class="about">
+    <section id="about">
       <div class="container">
-        {!! $data['about'] !!}
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Industry Insiders</h4>
+          </div>
+          <div class="col-md-8">
+            {!! $data['about'] !!}
+          </div>
+        </div>
       </div>
     </section>
 
