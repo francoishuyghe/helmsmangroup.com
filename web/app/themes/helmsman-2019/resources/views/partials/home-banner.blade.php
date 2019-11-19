@@ -1,6 +1,7 @@
+@php $banner = $data['banner'] @endphp
+@if($banner['active'])
 <section id="banner">
     <div class="container">
-      @php $banner = $data['banner'] @endphp
       <div class="row">
         <div class="col-md-6">
           <h2>{{ $banner['title']}}</h2>
@@ -14,3 +15,4 @@
       </div>
     </div>
 </section>
+@endif

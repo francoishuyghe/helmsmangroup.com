@@ -28,7 +28,7 @@
       @foreach ($data['image_text'] as $row)
           <div class="row">
             <div class="col-md-6">
-              <img data-aos="fade-up" src="{{ $row['image']['url'] }}" />
+              <div class="image" data-aos="fade-up" style="background-image: url({{ $row['image']['url'] }});"></div>
             </div>
             <div class="col-md-6">
               {!! $row['text'] !!}
@@ -41,7 +41,5 @@
     @include('partials/home-banner')
     @include('partials/home-services')
     @include('partials/home-bluebanner')
-    @include('partials/clients')
-
   @endwhile
 @endsection

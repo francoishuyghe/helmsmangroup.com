@@ -21,8 +21,13 @@
 
     #image-text{
         .row{
-            margin-bottom: $grid-gutter;
+            margin-bottom: $grid-gutter * 2;
             align-items: center;
+
+            .image{
+                height: 0;
+                padding-top: 60%;
+            }
 
             &:nth-child(2n){
                 flex-direction: row-reverse;
@@ -65,7 +70,7 @@
             margin-bottom: $grid-gutter;
 
             .icon{
-                max-width: 150px;
+                max-width: 100px;
             }
         }
     }
@@ -75,6 +80,7 @@
         padding: $grid-gutter * 2 0;
         color: theme-color(white);
         text-align: center;
+        margin-bottom: 0;
 
         .background{
             position: absolute;
@@ -142,5 +148,100 @@
 .page.services{
     .page-content{
         text-align: center;
+    }
+
+    .services-menu{
+        margin-bottom: $grid-gutter;
+
+        span{
+            display: inline-block;
+            padding: 5px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 1.5em;
+
+            &:hover{
+                background: theme-color(grey);
+            }
+
+            &.active{
+                background: theme-color(primary);
+                color: theme-color(white);
+                cursor: default;
+            }
+        }
+    }
+
+    .services-wrap{
+
+        .service{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+
+        #incubation{
+            @include on-circle($item-count: 6, $circle-size: 800px, $item-size: 200px); 
+            border: 5px solid theme-color(primary);
+            margin: $grid-gutter * 2 auto 0;
+
+            .step{
+                padding: 5px;
+                background: theme-color(white);
+                text-align: center;
+
+                .icon{
+                    position: relative;
+                }
+            }
+        }
+
+        .step{
+            margin-bottom: $grid-gutter;
+
+            h4{
+                font-size: 1.2em;
+                font-weight: 100;
+            }
+
+            .image{
+                height: 0;
+                padding-top: 60%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .icon{
+                max-width: 100px;
+                position: absolute;
+                left: 0;
+                top: 30px;
+
+                @include media-breakpoint-up(md){
+                    position: relative;
+                    display: inline-block;
+                    top: 0;
+                }
+            }
+
+            .number{
+                font-size: 50px;
+                color: theme-color(blue);
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            .description{
+                p{
+                    &:before{
+                        content: '•';
+                        display: inline-block;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
     }
 }
