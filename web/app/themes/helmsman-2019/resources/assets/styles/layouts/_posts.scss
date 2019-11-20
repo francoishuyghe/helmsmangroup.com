@@ -1,5 +1,9 @@
-.single.team{
+.single-team{
     h1{
         margin-bottom: 0;
+    }
+
+    .portrait{
+        margin-bottom: $grid-gutter / 2;
     }
 }

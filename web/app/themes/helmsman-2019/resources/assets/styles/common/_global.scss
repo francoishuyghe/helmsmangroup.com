@@ -11,6 +11,11 @@ h2{
     color: theme-color(primary);
     font-weight: 700;
     margin-bottom: $grid-gutter;
+    font-size: 1.5em;
+
+    @include media-breakpoint-up(md){
+        font-size: 2em;
+    }
 }
 
 h3{

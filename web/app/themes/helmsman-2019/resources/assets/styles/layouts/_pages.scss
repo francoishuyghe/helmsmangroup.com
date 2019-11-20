@@ -1,6 +1,10 @@
 .home{
     #intro{
-        margin-top: 150px;
+        margin-top: 120px;
+
+        @include media-breakpoint-up(md){
+            margin-top: 150px;
+        }
 
         h2{
             margin-bottom: 10px;
@@ -9,6 +13,10 @@
         p {
             margin-bottom: $grid-gutter;
         }
+
+        img{
+            width: 100%;
+        }
     }
 
     #about{
@@ -16,17 +24,28 @@
             text-transform: uppercase;
             font-size: 1.2em;
             margin-top: 0;
+            margin-bottom: 5px;
         }
     }
 
     #image-text{
         .row{
-            margin-bottom: $grid-gutter * 2;
+            margin-bottom: $grid-gutter;
             align-items: center;
+
+            @include media-breakpoint-up(md){
+                margin-bottom: $grid-gutter * 2;
+            }
 
             .image{
                 height: 0;
                 padding-top: 60%;
+                background-size: cover;
+                background-position: center;
+
+                @include media-breakpoint-down(sm){
+                    margin-bottom: $grid-gutter / 2;
+                }
             }
 
             &:nth-child(2n){
@@ -120,7 +139,11 @@
     h3{
         color: theme-color(black);
         line-height: 1.5em;
-        font-size: 1.7em;
+        font-size: 1.3em;
+
+        @include media-breakpoint-up(md){
+            font-size: 1.7em;
+        }
     }
 
     h2{
@@ -129,6 +152,22 @@
 
     .row{
         justify-content: center;
+    }
+
+    #team{
+        .portrait{
+            height: 0;
+            padding-top: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    #clients{
+        .client{
+            display: flex;
+            align-items: center;
+        }
     }
 }
 
@@ -183,27 +222,47 @@
         }
 
         #incubation{
-            @include on-circle($item-count: 6, $circle-size: 800px, $item-size: 200px); 
-            border: 5px solid theme-color(primary);
-            margin: $grid-gutter * 2 auto 0;
+            
+
+            @include media-breakpoint-up(md){
+                padding: $grid-gutter * 2 0;
+
+                .steps{
+                    @include on-circle($item-count: 6, $circle-size: 700px, $item-size: 200px); 
+                    border: 5px solid theme-color(primary);
+                    margin: 0 auto;
+                }
+            }
+
+            h5{
+                margin-bottom: $grid-gutter / 2;
+            }
+
+            .steps{
+                @extend .row;
+            }
 
             .step{
+                @extend .col-6;
                 padding: 5px;
                 background: theme-color(white);
                 text-align: center;
+                margin: 0;
 
                 .icon{
-                    position: relative;
+                    margin: auto;
                 }
             }
         }
 
         .step{
-            margin-bottom: $grid-gutter;
+            margin: $grid-gutter auto;
+            max-width: 800px;
 
             h4{
                 font-size: 1.2em;
                 font-weight: 100;
+                margin-bottom: 1em;
             }
 
             .image{
@@ -215,23 +274,34 @@
 
             .icon{
                 max-width: 100px;
-                position: absolute;
-                left: 0;
-                top: 30px;
 
                 @include media-breakpoint-up(md){
                     position: relative;
                     display: inline-block;
-                    top: 0;
                 }
             }
 
-            .number{
-                font-size: 50px;
-                color: theme-color(blue);
-                font-weight: 600;
-                display: inline-block;
+            .step-content{
+                display: flex;
+
+                .number{
+                    font-size: 50px;
+                    color: theme-color(blue);
+                    font-weight: 600;
+                    display: inline-block;
+                }
+
+                .text{
+                    flex: 1;
+                    padding-left: $grid-gutter / 2;
+
+                    p{
+                        margin-bottom: .5em;
+                    }
+                }
             }
+
+            
 
             .description{
                 p{

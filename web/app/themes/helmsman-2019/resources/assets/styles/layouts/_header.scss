@@ -8,13 +8,29 @@
   box-shadow: 0px 4px 14px 0px rgba(0,0,0,0.1);
 
   .container{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+
+    @include media-breakpoint-up(md){
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .brand{
-    max-width: 200px;
+    display: block;
+    text-align: center;
+
+    img{
+      max-width: 150px;
+    }
+
+    @include media-breakpoint-up(md){
+      text-align: left;
+
+      img{
+        max-width: 200px;
+      }
+    }
   }
 
   .nav {

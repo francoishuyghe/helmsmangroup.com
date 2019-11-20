@@ -3,7 +3,7 @@
       <h2>Services</h2>
       <div class="row">
         @foreach ($data['services'] as $service)
-          <div class="col-md-4 service">
+          <div class="col-md-4 col-6 service">
             <img class="icon" src="{{ $service['icon']['url'] }}" />
             <h6>{{ $service['name'] }}</h6>
           </div>
