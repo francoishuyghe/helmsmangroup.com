@@ -23,6 +23,7 @@ class PageCompany extends Controller
     public function data() {
 
         $data['clients'] = get_field('clients');
+        $data['clients_title'] = get_field('clients_title');
 
         return $data;
     }

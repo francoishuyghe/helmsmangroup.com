@@ -14,7 +14,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h4>Industry Insiders</h4>
+            {{-- <h4>Industry Insiders</h4> --}}
           </div>
           <div class="col-md-8">
             {!! $data['about'] !!}
