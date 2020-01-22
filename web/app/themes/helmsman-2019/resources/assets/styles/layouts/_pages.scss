@@ -227,6 +227,10 @@
             @include media-breakpoint-up(md){
                 padding: $grid-gutter * 2 0;
 
+                h5{
+                    margin-bottom: 75px;
+                }
+
                 .steps{
                     @include on-circle($item-count: 6, $circle-size: 700px, $item-size: 200px); 
                     border: 5px solid theme-color(primary);
